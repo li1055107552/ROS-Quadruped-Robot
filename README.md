@@ -19,3 +19,5 @@ ROS开发学习，四足机器人
 >    `$ rqt_image_view`  
 >(记得在摄像头界面窗口的左上角进行绑定，才能正常显示)
 
+### ATTENTION
+zwmvp_gazebo/worlds/zwmvp_world.world 下有两个绝对路径，需要手动更改！
