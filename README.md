@@ -2,7 +2,7 @@
 ROS开发学习，四足机器人
 
   
-启动RVIZ  
+启动Rviz  
 > `$ roslaunch zwmvp_description rviz.launch`
 
   
