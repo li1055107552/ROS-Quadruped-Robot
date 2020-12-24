@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+
+<robot name="zwmvp" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:property name="foot_mass" value="0.2"/>
+  <xacro:property name="foot_origin_xyz" value="0  0  0.25"/>
+  <xacro:property name="foot_cylinder_length" value="0.5"/>
+  <xacro:property name="foot_cylinder_radius" value="0.025"/>
+
+  <!-- link -->
+  <link name="left_front_foot">
+    <inertial>
+      <mass value="${foot_mass}"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision name="zwmvp__collision">
+      <origin rpy="0 0 0" xyz="${foot_origin_xyz}"/>
+      <geometry>
+        <cylinder length="${foot_cylinder_length}" radius="${foot_cylinder_radius}"/>
+      </geometry>
+    </collision>
+    <visual name="zwmvp__visual">
+      <origin rpy="0 0 0" xyz="${foot_origin_xyz}"/>
+      <geometry>
+        <cylinder length="${foot_cylinder_length}" radius="${foot_cylinder_radius}"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="right_front_foot">
+    <inertial>
+      <mass value="${foot_mass}"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision name="zwmvp__collision">
+      <origin rpy="0 0 0" xyz="${foot_origin_xyz}"/>
+      <geometry>
+        <cylinder length="${foot_cylinder_length}" radius="${foot_cylinder_radius}"/>
+      </geometry>
+    </collision>
+    <visual name="zwmvp__visual">
+      <origin rpy="0 0 0" xyz="${foot_origin_xyz}"/>
+      <geometry>
+        <cylinder length="${foot_cylinder_length}" radius="${foot_cylinder_radius}"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="left_back_foot">
+    <inertial>
+      <mass value="${foot_mass}"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision name="zwmvp__collision">
+      <origin rpy="0 0 0" xyz="${foot_origin_xyz}"/>
+      <geometry>
+        <cylinder length="${foot_cylinder_length}" radius="${foot_cylinder_radius}"/>
+      </geometry>
+    </collision>
+    <visual name="zwmvp__visual">
+      <origin rpy="0 0 0" xyz="${foot_origin_xyz}"/>
+      <geometry>
+        <cylinder length="${foot_cylinder_length}" radius="${foot_cylinder_radius}"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="right_back_foot">
+    <inertial>
+      <mass value="${foot_mass}"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+    </inertial>
+    <collision name="zwmvp__collision">
+      <origin rpy="0 0 0" xyz="${foot_origin_xyz}"/>
+      <geometry>
+        <cylinder length="${foot_cylinder_length}" radius="${foot_cylinder_radius}"/>
+      </geometry>
+    </collision>
+    <visual name="zwmvp__visual">
+      <origin rpy="0 0 0" xyz="${foot_origin_xyz}"/>
+      <geometry>
+        <cylinder length="${foot_cylinder_length}" radius="${foot_cylinder_radius}"/>
+      </geometry>
+    </visual>
+  </link>
+
+
+  <!-- joint -->
+  <joint name="lf_foot_shoe_joint" type="fixed">
+    <parent link="left_front_foot"/>
+    <child link="left_front_shoe"/>
+    <origin rpy="0 0 0" xyz="0   0  0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <joint name="rf_foot_shoe_joint" type="fixed">
+    <parent link="right_front_foot"/>
+    <child link="right_front_shoe"/>
+    <origin rpy="0 0 0" xyz="0   0  0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <joint name="lb_foot_shoe_joint" type="fixed">
+    <parent link="left_back_foot"/>
+    <child link="left_back_shoe"/>
+    <origin rpy="0 0 0" xyz="0  0  0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <joint name="rb_foot_shoe_joint" type="fixed">
+    <parent link="right_back_foot"/>
+    <child link="right_back_shoe"/>
+    <origin rpy="0 0 0" xyz="0   0  0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+</robot>

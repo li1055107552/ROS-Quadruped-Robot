@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+
+<robot name="zwmvp" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <transmission name="lf_rot_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="body_lf_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lf_rot_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="rf_rot_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="body_rf_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rf_rot_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="lb_rot_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="body_lb_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lb_rot_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="rb_rot_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="body_rb_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rb_rot_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="lf_linear_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="lf_leg_foot_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lf_linear_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction> 1 </mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="rf_linear_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rf_leg_foot_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rf_linear_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction> 1 </mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="lb_linear_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="lb_leg_foot_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="lb_linear_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction> 1 </mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="rb_linear_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rb_leg_foot_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rb_linear_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction> 1 </mechanicalReduction>
+    </actuator>
+  </transmission>
+
+</robot>

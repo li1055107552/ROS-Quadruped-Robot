@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+
+<robot name="zwmvp" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:property name="leg_mass" value="0.5"/>
+  <xacro:property name="leg_origin_xyz" value="0  0  -0.3"/>
+  <xacro:property name="leg_box_size"	value="0.1 0.1 0.6"/>
+  <xacro:property name="joint_foot_origin_xyz" value="0   0  -0.6"/>
+
+  <!-- link -->
+  <link name="left_front_leg">
+    <inertial>
+      <mass value="${leg_mass}"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="zwmvp__collision">
+      <origin rpy="0 0 0" xyz="${leg_origin_xyz}"/>
+      <geometry>
+        <box size="${leg_box_size}"/>
+      </geometry>
+    </collision>
+    <visual name="zwmvp__visual">
+      <origin rpy="0 0 0" xyz="${leg_origin_xyz}"/>
+      <geometry>
+        <box size="${leg_box_size}"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="right_front_leg">
+    <inertial>
+      <mass value="${leg_mass}"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="zwmvp__collision">
+      <origin rpy="0 0 0" xyz="${leg_origin_xyz}"/>
+      <geometry>
+        <box size="${leg_box_size}"/>
+      </geometry>
+    </collision>
+    <visual name="zwmvp__visual">
+      <origin rpy="0 0 0" xyz="${leg_origin_xyz}"/>
+      <geometry>
+        <box size="${leg_box_size}"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="left_back_leg">
+    <inertial>
+      <mass value="${leg_mass}"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="zwmvp__collision">
+      <origin rpy="0 0 0" xyz="${leg_origin_xyz}"/>
+      <geometry>
+        <box size="${leg_box_size}"/>
+      </geometry>
+    </collision>
+    <visual name="zwmvp__visual">
+      <origin rpy="0 0 0" xyz="${leg_origin_xyz}"/>
+      <geometry>
+        <box size="${leg_box_size}"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="right_back_leg">
+    <inertial>
+      <mass value="${leg_mass}"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="zwmvp__collision">
+      <origin rpy="0 0 0" xyz="${leg_origin_xyz}"/>
+      <geometry>
+        <box size="${leg_box_size}"/>
+      </geometry>
+    </collision>
+    <visual name="zwmvp__visual">
+      <origin rpy="0 0 0" xyz="${leg_origin_xyz}"/>
+      <geometry>
+        <box size="${leg_box_size}"/>
+      </geometry>
+    </visual>
+  </link>
+
+
+  <!-- joint -->
+  <joint name="lf_leg_foot_joint" type="prismatic">
+    <parent link="left_front_leg"/>
+    <child link="left_front_foot"/>
+    <origin rpy="0 0 0" xyz="${joint_foot_origin_xyz}"/>
+    <axis xyz="0  0 -1"/>
+    <limit effort="1e10" lower="0" upper="0.5" velocity="10"/>
+  </joint>
+
+  <joint name="rf_leg_foot_joint" type="prismatic">
+    <parent link="right_front_leg"/>
+    <child link="right_front_foot"/>
+    <origin rpy="0 0 0" xyz="${joint_foot_origin_xyz}"/>
+    <axis xyz="0  0 -1"/>
+    <limit effort="1e10" lower="0" upper="0.5" velocity="10"/>
+  </joint>
+
+  <joint name="lb_leg_foot_joint" type="prismatic">
+    <parent link="left_back_leg"/>
+    <child link="left_back_foot"/>
+    <origin rpy="0 0 0" xyz="${joint_foot_origin_xyz}"/>
+    <axis xyz="0  0 -1"/>
+    <limit effort="1e10" lower="0" upper="0.5" velocity="10"/>
+  </joint>
+
+  <joint name="rb_leg_foot_joint" type="prismatic">
+    <parent link="right_back_leg"/>
+    <child link="right_back_foot"/>
+    <origin rpy="0 0 0" xyz="${joint_foot_origin_xyz}"/>
+    <axis xyz="0  0 -1"/>
+    <limit effort="1e10" lower="0" upper="0.5" velocity="10"/>
+  </joint>
+
+</robot>

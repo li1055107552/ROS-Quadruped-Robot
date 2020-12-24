@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<robot name="zwmvp" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Import all Gazebo-customization elements, including Gazebo colors -->
+  <xacro:include filename="$(find zwmvp_description)/urdf/zwmvp.gazebo" />
+
+	<!-- body -->
+	<xacro:include filename="$(find zwmvp_description)/urdf/zwmvp_body.xacro" />
+	<!-- let -->
+	<xacro:include filename="$(find zwmvp_description)/urdf/zwmvp_leg.xacro" />
+	<!-- foot -->
+	<xacro:include filename="$(find zwmvp_description)/urdf/zwmvp_foot.xacro" />
+	<!-- shoe -->
+	<xacro:include filename="$(find zwmvp_description)/urdf/zwmvp_shoe.xacro" />
+	<!-- camera -->
+	<xacro:include filename="$(find zwmvp_description)/urdf/zwmvp_camera.xacro" />
+	<!-- transmission -->
+	<xacro:include filename="$(find zwmvp_description)/urdf/zwmvp_transmission.xacro" />
+
+  <xacro:usb_camera prefix="camera"/>
+  
+</robot>

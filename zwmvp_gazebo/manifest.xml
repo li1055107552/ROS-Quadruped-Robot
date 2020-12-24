@@ -1,0 +1,17 @@
+<package>
+  <description brief="zwmvp_gazebo">
+
+     zwmvp_gazebo
+
+  </description>
+  <author>JIm</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/zwmvp_gazebo</url>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  <depend package="std_msgs"/>
+
+</package>
+
+

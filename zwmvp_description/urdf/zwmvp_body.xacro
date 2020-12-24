@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+
+<robot name="zwmvp" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:property name="body_box_size"	value="1.5 0.5 0.3"/>
+  <xacro:property name="damping" 	value="0.7"/>
+
+  <link name="body">
+    <inertial>
+      <mass value="5"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="pig_dog__collision">
+      <origin rpy="0 0 0" xyz="0.35 0   0.5"/>
+      <geometry>
+        <box size="${body_box_size}"/>
+      </geometry>
+    </collision>
+    <visual name="pig_dog__visual">
+      <origin rpy="0 0 0" xyz="0.35 0   0.5"/>
+      <geometry>
+        <box size="${body_box_size}"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="body_lf_joint" type="continuous">
+    <parent link="body"/>
+    <child link="left_front_leg"/>
+    <origin rpy="0 0 0" xyz="-0.35 -0.3   0.65"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="${damping}"/>
+  </joint>
+
+  <joint name="body_rf_joint" type="continuous">
+    <parent link="body"/>
+    <child link="right_front_leg"/>
+    <origin rpy="0 0 0" xyz="-0.35  0.3   0.65"/>
+    <axis xyz="0 -1  0"/>
+    <dynamics damping="${damping}"/>
+  </joint>
+
+  <joint name="body_lb_joint" type="continuous">
+    <parent link="body"/>
+    <child link="left_back_leg"/>
+    <origin rpy="0 0 0" xyz="1.05 -0.3   0.65"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="${damping}"/>
+  </joint>
+
+  <joint name="body_rb_joint" type="continuous">
+    <parent link="body"/>
+    <child link="right_back_leg"/>
+    <origin rpy="0 0 0" xyz="1.05 0.3  0.65"/>
+    <axis xyz="0 -1  0"/>
+    <dynamics damping="${damping}"/>
+  </joint>
+
+</robot>

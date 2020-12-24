@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<sdf version="1.0">
+  <world name="default">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <model name="zwmvp_world">
+      <pose frame=''>-25 20 0.5 0 -0 0</pose>
+      <static>true</static>
+      <inertial>
+        <mass value="1000" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+      </inertial>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>file:///home/xiliding/catkin_ws/src/zwmvp/zwmvp_description/meshes/zwmvp.dae</uri>
+	    </mesh>
+          </geometry>
+        </visual>
+	<collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>file:///home/xiliding/catkin_ws/src/zwmvp/zwmvp_description/meshes/zwmvp.dae</uri>
+	    </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+  </world>
+</sdf>
+

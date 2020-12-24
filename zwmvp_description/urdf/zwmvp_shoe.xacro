@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+
+<robot name="zwmvp" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:property name="shoe_mass" value="0.1"/>
+  <xacro:property name="shoe_radius"  value="0.05"/>
+
+  <link name="left_front_shoe">
+    <inertial>
+      <mass value="${shoe_mass}"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
+    <collision name="zwmvp__collision">
+      <origin rpy="0 0 0" xyz="0   0   0"/>
+      <geometry>
+        <sphere radius="${shoe_radius}"/>
+      </geometry>
+    </collision>
+    <visual name="zwmvp__visual">
+      <origin rpy="0 0 0" xyz="0   0   0"/>
+      <geometry>
+        <sphere radius="${shoe_radius}"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="left_back_shoe">
+    <inertial>
+      <mass value="${shoe_mass}"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
+    <collision name="zwmvp__collision">
+      <origin rpy="0 0 0" xyz="0   0   0"/>
+      <geometry>
+        <sphere radius="${shoe_radius}"/>
+      </geometry>
+    </collision>
+    <visual name="zwmvp__visual">
+      <origin rpy="0 0 0" xyz="0   0   0"/>
+      <geometry>
+        <sphere radius="${shoe_radius}"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="right_front_shoe">
+    <inertial>
+      <mass value="${shoe_mass}"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
+    <collision name="zwmvp__collision">
+      <origin rpy="0 0 0" xyz="0   0   0"/>
+      <geometry>
+        <sphere radius="${shoe_radius}"/>
+      </geometry>
+    </collision>
+    <visual name="zwmvp__visual">
+      <origin rpy="0 0 0" xyz="0   0   0"/>
+      <geometry>
+        <sphere radius="${shoe_radius}"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="right_back_shoe">
+    <inertial>
+      <mass value="${shoe_mass}"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
+    <collision name="zwmvp__collision">
+      <origin rpy="0 0 0" xyz="0   0   0"/>
+      <geometry>
+        <sphere radius="${shoe_radius}"/>
+      </geometry>
+    </collision>
+    <visual name="zwmvp__visual">
+      <origin rpy="0 0 0" xyz="0   0   0"/>
+      <geometry>
+        <sphere radius="${shoe_radius}"/>
+      </geometry>
+    </visual>
+  </link>
+
+</robot>
