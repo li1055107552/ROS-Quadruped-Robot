@@ -3,7 +3,9 @@ ROS开发学习，四足机器人
 
   
 启动Rviz  
-> `$ roslaunch zwmvp_description rviz.launch`
+> `
+    $ roslaunch zwmvp_description rviz.launch
+  `
 
   
 启动Gazebo  
