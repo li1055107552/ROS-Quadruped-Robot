@@ -10,5 +10,6 @@ ROS开发学习，四足机器人
 启动键盘控制器  
 `$ rosrun zwmvp_control teleop_control.py`
 
-启动摄像头  
+启动摄像头视角窗口  
 `$ rqt_image_view`
+(记得在摄像头界面窗口的左上角进行绑定，才能正常显示)
